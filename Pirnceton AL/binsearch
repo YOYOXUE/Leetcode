@@ -1,0 +1,15 @@
+#!/usr/bin/env python  
+#-*-coding:utf-8-*-
+int low=0 
+high=len(l)
+def Bsearch(l,key)
+  while low<=high:
+    (low+high)/2=mid
+    if mid=key:
+      return mid
+    elif mid<key:
+      low=mid+1
+    elif mid>key:high=mid-1
+    else:print("error")
+    
+    

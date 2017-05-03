@@ -1,5 +1,8 @@
 def matrixRe(self,nums,r,c):
-  flat=sum(numes,[])
+  flat=sum(nums,[])
   if len(flat)!=r*c:
     return nums
-  tuples=zip(*（）
+  tuples=zip(*（[iter(flat)]*c）
+  return map(list,tuples)
+
+

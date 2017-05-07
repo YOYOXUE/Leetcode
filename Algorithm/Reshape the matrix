@@ -6,3 +6,10 @@ def matrixRe(self,nums,r,c):
   return map(list,tuples)
 
 
+import numpy as np
+class Solution(object):
+  def matrixReshape(self,nums,r,c):
+    try:
+      return np.reshape(nums,(r,c)).tolist()
+     wxcept:
+      return nums

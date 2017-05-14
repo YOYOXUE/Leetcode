@@ -1,0 +1,25 @@
+[[0,1,0,0],
+ [1,1,1,0],
+ [0,1,0,0],
+ [1,1,0,0]]
+
+Answer: 16
+Explanation: The perimeter is the 16 yellow stripes in the image.
+思路：如果有island的旁边是空（<0）或者水（0）,则他们之间有一条边，和前后左右的空做4次比较
+
+class Solution(object):
+    def islandPerimeter(self, grid):
+        res, m, n = 0, len(grid), len(grid[0]) if grid else 0
+        return sum([(r - 1 < 0  or grid[r-1][c] == 0) +\
+                    (c - 1 < 0  or grid[r][c-1] == 0) +\
+                    (r + 1 >= m or grid[r+1][c] == 0) +\
+                    (c + 1 >= n or grid[r][c+1] == 0)
+                    for r in range(m) 
+                    for c in range(n) 
+                    if grid[r][c] == 1]
+                    )
+                    
+                    
+                    def islandPerimeter(self, grid):
+    return sum(sum(map(operator.ne, [0] + row, row + [0]))
+               for row in grid + map(list, zip(*grid)))

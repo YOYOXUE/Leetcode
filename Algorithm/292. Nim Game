@@ -1,0 +1,5 @@
+AB玩游戏，每次remove1-3个stone，谁拿走最后一个谁赢，写一个A赢得函数
+
+class solution(object):
+  def win(self,n):
+    return n%4!=0

@@ -1,0 +1,8 @@
+Class Solution (object):
+  def Maxnum(self,num):
+    c=0,ans=0
+    for i in num:
+      if i==1:c+=1 ans=max(ans,c)
+      else:c=0
+  return ans
+      
